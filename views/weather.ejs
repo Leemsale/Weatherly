@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Weather forecast at <%= forecast.name %>
+    </title>
+</head> 
+
+<body>
+    <div class="weather">
+        <h1 style="margin: 0;"><strong>📍<%= forecast.name %></strong>, <%= forecast.countryName %></strong></h1>
+        <!-- Display Weather Icon -->
+        <img src="http://openweathermap.org/img/wn/<%= forecast.weather[0].icon %>@2x.png"
+            height="150px" alt="<%= forecast.weather[0].description %>">
+        <p id="temp"><strong><%= forecast.main.temp %> °C</strong></p>
+
+        <p><strong><%= forecast.weather[0].description %></strong></p>
+
+        <hr />
+        <div class="details">
+
+            <div id="detail">
+                <p><img src="/images/feels.png" alt="feels" height="20px"><br/><strong>Feels Like:</strong></p>
+                <p><%= forecast.main.feels_like %> °C</p>
+            </div>
+
+            <div id="detail">
+                <p><img src="/images/lowtemp.png" alt="low" height="20px"><strong>Low:</strong></p>
+                <p><%= forecast.main.temp_min %> °C</p>
+            </div>
+
+            <div id="detail">
+                <p><img src="/images/maxtemp.png" alt="High" height="20px"><strong>High:</strong></p>
+                <p><%= forecast.main.temp_max %> °C</p>
+            </div>
+
+            <div id="detail">
+                <p><img src="/images/wind.png" alt="Wind" height="20px"><strong>Wind:</strong></p>
+                <p><%=forecast.wind.speed %> m/s</p>
+            </div>
+
+            <div id="detail">
+                <p><img src="/images/visibility.png" alt="visibility" height="20px"><strong>Visibility:</strong></p>
+                <p><%= forecast.visibility %> meters</p>
+            </div>
+        </div>
+    <a href="/">Search again</a>
+    </div>
+</body>
+
+<footer>LilyEarn © <%= new Date().getFullYear() %></footer>
+
+</html>
