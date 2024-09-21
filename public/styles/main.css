@@ -124,7 +124,7 @@ footer {
 /* Styles for mobile devices (up to 600px wide) */
 @media (max-width: 600px) {
     body {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     .weather {
@@ -137,7 +137,7 @@ footer {
     }
 
     #temp {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     hr {
@@ -151,12 +151,12 @@ footer {
     }
 
     #detail {
-        font-size: 0.5rem;
+        font-size: 1em;
         margin: 5% 0;
     }
 
     a {
-        font-size: 0.5rem;
+        font-size: 1rem;
         padding: 5px;
 
     }
@@ -169,9 +169,8 @@ footer {
     .search button {
         width: 90%;
         margin: 5px 0;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
-
 
     footer {
         padding: 15px;
